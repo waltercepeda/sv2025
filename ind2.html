@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Amor para Ti</title>
+    <style>
+        body {
+            background: #ff77a9;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .contenido {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .message {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 30px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .heart {
+            font-size: 100px;
+            animation: heartbeat 1s infinite;
+        }
+
+        .button {
+            padding: 15px 30px;
+            background-color: #ff4791;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff2070;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Página de la sorpresa */
+        .sorpresa {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(circle, #15152e, #0a0a1f);
+            overflow: hidden;
+            z-index: 10;
+            color: #fff;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        /* Estrellas animadas */
+        .estrellas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+            animation: estrellasBrillo 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes estrellasBrillo {
+            from { opacity: 0.7; }
+            to { opacity: 1; }
+        }
+
+        /* Mensaje en la sorpresa */
+        .mensaje-estrella {
+            font-size: 3em;
+            font-weight: bold;
+            margin-top: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- Sección principal -->
+    <div id="1">
+        <div class="contenido" id="contenido">
+            <h1 id="contenidos">¡Feliz San Valentín!</h1>
+            <p class="message">Este es mi pequeño regalo para vos, con todo mi amor ❤️</p>
+            <div class="heart">💖</div>
+            <p>Te amo más de lo que las palabras pueden expresar. Gracias por ser mi razón de sonreír todos los días.</p>
+            <button class="button" onclick="mostrarSorpresa()">te amo</button>
+        </div>
+    </div>
+    
+    <!-- Sección sorpresa -->
+    <div class="sorpresa" id="sorpresa">
+        <div class="estrellas"></div>
+        <p class="mensaje-estrella">pasaron 12 años y cada dia te amo un poco mas!</p>
+        <div class="heart">💖</div>
+        
+    </div>
+    
+    <script>
+        function mostrarSorpresa() {
+            document.getElementById('contenido').style.display = "none";
+            document.getElementById('sorpresa').style.display = "block";
+        }
+
+        
+    </script>
+</body>
+</html>
